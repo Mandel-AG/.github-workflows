@@ -4,7 +4,6 @@ on:
   push:
   workflow_dispatch:
   schedule:
-    # “At 09:00 on every day-of-week from Monday through Friday.”
     - cron: '30 8 * * *'
 
 jobs:
@@ -32,5 +31,4 @@ jobs:
           commit: --signoff
           message: 'chore: :memo: automatically README.md'
         env:
-          # This is necessary in order to push a commit to the repo
           GITHUB_TOKEN: ${{ secrets.MySecretGh }}
