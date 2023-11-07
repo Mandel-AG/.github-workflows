@@ -1,5 +1,5 @@
-const fs = require('fs');
-const schedule = require('node-schedule');
+const readme = require('./readme');
+const  fs = require('fs');
 
 // Fonction pour mettre à jour le fichier README.md
 function updateReadme() {
@@ -20,9 +20,3 @@ Ceci est mon fichier README.md.`;
     }
   });
 }
-
-// Planifiez la mise à jour chaque jour à minuit
-const updateSchedule = schedule.scheduleJob('0 0 * * *', updateReadme);
-
-// Vous pouvez également déclencher la mise à jour manuellement en appelant updateReadme()
-updateReadme();
