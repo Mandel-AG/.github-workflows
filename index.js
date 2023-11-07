@@ -2,8 +2,9 @@ const fs = require('fs');
 
 function updateReadme() {
   const currentDate = new Date();
-  const currentTime = currentDate.toLocaleTimeString();
-
+  const options = { timeZone: 'Europe/Paris' }; 
+  const currentTime = currentDate.toLocaleTimeString('fr-FR', options);
+  
   const newReadmeContent = `# Mon Projet
 
 Ceci est une nouvelle version du fichier README.md pour aujourd'hui : ${currentTime}`;
