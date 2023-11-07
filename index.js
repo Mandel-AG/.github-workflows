@@ -1,4 +1,4 @@
-const readme = require('./readme');
+const readme = require('./README.md');
 const  fs = require('fs');
 
 // Fonction pour mettre à jour le fichier README.md
