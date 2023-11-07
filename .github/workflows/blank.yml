@@ -28,7 +28,7 @@ jobs:
         uses: EndBug/add-and-commit@v9
         with:
           author_name: Mandel-AG
-          author_email: mandel06@gmail.com
+          author_email: a.mandel06@gmail.com
           commit: --signoff
           message: 'chore: :memo: automatically README.md'
         env:
