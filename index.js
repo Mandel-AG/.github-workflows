@@ -1,18 +1,14 @@
-const readme = require('./README.md');
-const  fs = require('fs');
+const fs = require('fs');
 
-// Fonction pour mettre à jour le fichier README.md
 function updateReadme() {
   const currentDate = new Date();
   const currentTime = currentDate.toLocaleTimeString();
 
-  const readmeContent = `# Mon Projet
+  const newReadmeContent = `# Mon Projet
 
-Dernière mise à jour : ${currentTime}
+Ceci est une nouvelle version du fichier README.md pour aujourd'hui : ${currentTime}`;
 
-Ceci est mon fichier README.md.`;
-
-  fs.writeFile('README.md', readmeContent, (err) => {
+  fs.writeFile('README.md', newReadmeContent, (err) => {
     if (err) {
       console.error('Erreur lors de la mise à jour du fichier README.md :', err);
     } else {
@@ -20,3 +16,5 @@ Ceci est mon fichier README.md.`;
     }
   });
 }
+
+updateReadme();
